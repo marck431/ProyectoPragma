@@ -46,3 +46,10 @@ jobs:
             build/reports/tests/test
             build/karate-reports
 
+      - name: Publish Test Results Allure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Allure Report
+          path: |
+            build/reports/allure-report/allureReport
