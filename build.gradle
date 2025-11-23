@@ -12,10 +12,6 @@ repositories {
 
 allure {
     version = "2.27.0"
-
-    useJUnit5 {
-        version = "2.27.0"
-    }
 }
 
 dependencies {
@@ -28,4 +24,6 @@ dependencies {
 
 test {
     useJUnitPlatform()
+    systemProperty "allure.results.directory", "build/allure-results"
+
 }
