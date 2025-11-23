@@ -28,7 +28,4 @@ dependencies {
 
 test {
     useJUnitPlatform()
-
-    systemProperty "karate.options", "--report-dir build/karate-reports --allure"
-    systemProperty "allure.results.directory", "build/allure-results"
 }
