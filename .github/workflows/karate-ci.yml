@@ -38,8 +38,9 @@ jobs:
 
       - name: Install Allure CLI
         run: |
-          brew update
-          brew install allure
+          wget https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/latest/allure-commandline-latest.zip -O allure.zip
+          unzip allure.zip -d /opt/allure
+          sudo ln -s /opt/allure/*/bin/allure /usr/local/bin/allure
           allure --version
 
       - name: Generate Allure Report
