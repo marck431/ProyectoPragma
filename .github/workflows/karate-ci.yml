@@ -42,7 +42,6 @@ jobs:
         with:
           name: karate-test-results
           path: |
-            build/reports/allure-report/allureReport
             build/reports/tests/test
             build/karate-reports
 
@@ -51,5 +50,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Allure Report
-          path: |
-            build/reports/allure-report/allureReport
+          path: build/reports/allure-report
