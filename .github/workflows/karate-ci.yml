@@ -43,11 +43,23 @@ jobs:
           name: karate-test-results
           path: |
             build/reports/tests/test
-            build/karate-reports
 
       - name: Publish Test Results Allure
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: Allure Report
-          path: build/reports/allure-report
+          path: build/allure-results
+
+      - name: Install Allure
+        uses: simple-elf/allure-report-action@v1
+
+      - name: Generate Allure Report
+        run: allure generate build/allure-results --clean -o allure-report
+
+      # 👉 Subir el reporte (HTML)
+      - name: Upload Allure HTML Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: allure-report
