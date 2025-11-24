@@ -15,6 +15,7 @@ permissions:
 jobs:
 
   test:
+    name: Pruebas de Karate
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -52,6 +53,7 @@ jobs:
 
 
   publish_artifacts:
+    name: Karate Publish Report
     needs: test
     if: always()
     runs-on: ubuntu-latest
@@ -69,6 +71,7 @@ jobs:
 
 
   deploy_allure:
+    name: Allure Publish Report
     needs: test
     if: always()
     runs-on: ubuntu-latest
@@ -103,7 +106,7 @@ jobs:
           publish_dir: allure-history
           force_orphan: true
 
-      - name: Show Report Link
+      - name:  Show Report Link
         run: |
           echo "El reporte está disponible aquí:"
           echo "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
