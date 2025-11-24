@@ -1,0 +1,3 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","891","[2:19] Traer un cliente","","Mon Nov 24 00:14:33 UTC 2025","passed","Mon Nov 24 00:14:34 UTC 2025","","","",""
+"","2340","[1:11] Creación de un cliente","","Mon Nov 24 00:14:31 UTC 2025","passed","Mon Nov 24 00:14:33 UTC 2025","","","",""
