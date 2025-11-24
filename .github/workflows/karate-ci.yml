@@ -13,9 +13,8 @@ permissions:
   id-token: write
 
 jobs:
-
   test:
-    name: Pruebas de Karate
+    name: Karate Test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
