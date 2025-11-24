@@ -53,7 +53,7 @@ jobs:
 
   publish_artifacts:
     name: Karate Publish Report
-    needs: test
+    needs: [test]
     if: always()
     runs-on: ubuntu-latest
     steps:
@@ -71,7 +71,7 @@ jobs:
 
   deploy_allure:
     name: Allure Publish Report
-    needs: test
+    needs: [test]
     if: always()
     runs-on: ubuntu-latest
     steps:
