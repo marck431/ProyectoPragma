@@ -8,6 +8,9 @@ Feature: Cliente
     * def dataRequest = karate.toJson(data,true)
     * print data
 
+  Rule: El cliente debe tener direccion,
+  edad, genero, idCliente, nombre, y si es vip
+
   Scenario: Creación de un cliente
     * print dataRequest
     Given path clientPath
